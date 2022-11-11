@@ -25,6 +25,9 @@ $base-color-dark2: #333;
             height: 100%;
             padding: 0 1.5rem;
             position: relative;
+            @media (max-width: 1000px) {
+                padding: 0 1rem;
+            }
             .header__logo {
                 display: flex;
                 align-items: center;
@@ -33,6 +36,9 @@ $base-color-dark2: #333;
                 }
                 span {
                     margin-left: 0.5rem;
+                    @media (max-width: 1000px) {
+                        font-size: 0.7rem;
+                    }
                 }
             }
             .header__btns {
@@ -46,6 +52,7 @@ $base-color-dark2: #333;
                 @media (max-width: 1000px) {
                     li {
                         margin-left: 1rem;
+                        font-size: 0.7rem;
                     }
                 }
                 .header__cart_btn {
