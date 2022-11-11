@@ -1,0 +1,173 @@
+$base-color-light: #eee;    
+$base-color-dark1: #555;
+$base-color-dark2: #333;
+
+.content__items {
+    max-width: 1280px;
+    margin: auto;
+    padding: 1rem 2rem 2rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    .item:nth-child(3n) {
+        margin-right: 0;
+    }
+    @media (max-width: 1000px) {
+        .item:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+    
+    .item {
+        width: 32%;
+        margin-bottom: 1.5rem;
+        margin-right: 2%;
+        .item__img {
+            overflow: hidden;
+            max-height: 350px;
+            cursor: pointer;
+            img {
+                width: 100%;
+                transition: transform 500ms ease;
+            }
+            img:hover {
+                transform: scale(1.05);
+            }
+        }
+        .item__txt {
+            padding: 1rem;
+            background: #fff;
+            h2 {
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+            h3 {
+                font-size: 0.8rem;
+                color: #666;
+                padding: 0.2rem 0.6rem;
+                margin: 0.5rem 0;
+                border: solid 1px #666;
+                border-radius: 35px;
+                width: fit-content;
+            }
+            p {
+                font-size: 0.9rem;
+                color: #666;
+                margin-bottom: 0.5rem;
+            }
+            b {
+                font-size: 1rem;
+                color: rgb(235, 58, 58);
+            }
+            .add_to_cart {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                div {
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: rgb(235, 58, 58);
+                    border-radius: 50%;
+                    color: #fff;
+                    font-size: 600;
+                    cursor: pointer;
+                    transition: 500ms ease;
+                }
+                div:hover {
+                    background: rgb(200, 7, 7);
+                    transform: scale(1.1);
+                }
+            }
+        }
+        @media (max-width: 1000px) {
+            width: 48%;
+            margin-right: 0;
+        }
+    }
+    @media (max-width: 1000px) {
+        justify-content: space-between;
+    }
+}
+
+.full_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #0000008e;
+    z-index: 100;
+    .full_item_box {
+        width: 100%;
+        max-width: 400px;
+        position: relative;
+        .exit {
+            position: absolute;
+            right: 1rem;
+            top: 0.8rem;
+            font-size: 1.4rem;
+            color: #666;
+            cursor: pointer;
+        }
+        .item__img {
+            img {
+                width: 100%;
+            }
+        }
+        .item__txt {
+            padding: 2rem;
+            margin-top: -5px;
+            background: #fff;
+            h2 {
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+            h3 {
+                font-size: 0.8rem;
+                color: #666;
+                padding: 0.2rem 0.6rem;
+                margin: 0.5rem 0;
+                border: solid 1px #666;
+                border-radius: 35px;
+                width: fit-content;
+            }
+            p {
+                font-size: 0.9rem;
+                color: #666;
+                margin-bottom: 0.5rem;
+            }
+            b {
+                font-size: 1rem;
+                color: rgb(235, 58, 58);
+            }
+            .add_to_cart {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                div {
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: rgb(235, 58, 58);
+                    border-radius: 50%;
+                    color: #fff;
+                    font-size: 2rem;
+                    cursor: pointer;
+                    transition: 500ms ease;
+                }
+                div:hover {
+                    background: rgb(200, 7, 7);
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
